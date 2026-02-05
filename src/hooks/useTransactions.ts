@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import { format, startOfMonth, endOfMonth, subMonths } from 'date-fns';
+import { format, subMonths } from 'date-fns';
 import type { Transaction, DailySummary, MonthlySummary, CategorySummary } from '../types';
-import { STORAGE_KEY, getCategoryById, CATEGORIES } from '../constants';
+import { STORAGE_KEY, getCategoryById } from '../constants';
 import { validateTransactions, validateExportData } from '../schemas';
 
 // UUID生成
