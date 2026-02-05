@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* カスタムベーススタイル */
+body {
+  background-color: #F7F7F7;
+  color: #333333;
+  font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* カスタムコンポーネント */
+@layer components {
+  .card {
+    @apply bg-white rounded-md border border-muji-border p-4 shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-muji-text text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-muji-text px-4 py-2 rounded-md border border-muji-border hover:bg-gray-50 transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-muji-border rounded-md focus:outline-none focus:ring-2 focus:ring-muji-text focus:ring-opacity-20;
+  }
+  
+  .tab-active {
+    @apply border-b-2 border-muji-text text-muji-text font-medium;
+  }
+  
+  .tab-inactive {
+    @apply text-muji-muted hover:text-muji-text transition-colors;
+  }
+}
